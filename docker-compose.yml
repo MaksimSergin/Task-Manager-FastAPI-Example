@@ -1,0 +1,48 @@
+# docker-compose.yml
+
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: task_manager_app
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+    env_file:
+      - .env
+    networks:
+      - app-network
+
+  db:
+    image: postgres:14
+    container_name: task_manager_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  redis:
+    image: redis:7
+    container_name: task_manager_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

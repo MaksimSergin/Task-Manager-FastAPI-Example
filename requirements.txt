@@ -1,0 +1,11 @@
+setuptools
+fastapi
+uvicorn[standard]
+asyncpg
+pydantic
+pydantic-settings
+python-dotenv
+passlib
+bcrypt==3.2.0
+python-jose
+redis

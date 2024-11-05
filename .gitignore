@@ -1,0 +1,66 @@
+# Python-specific ignores
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+# FastAPI and other temporary files
+*.log
+*.db
+*.sqlite3
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code workspace files
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+*.env
+
+# Ignore Docker-related files and folders
+docker-compose.override.yml
+docker-compose.yaml.override
+*~backup
+
+# Mypy type checker
+.mypy_cache/
+
+# Pyre type checker
+.pyre/
+
+# Pytest cache
+.pytest_cache/
+
+# Pyright type checker
+.pyright/
+
+# Ignore temporary files created by the editor
+*.swp
+*.swo
+*~
+*.bak
+
+# Ignore IDE and editor config files
+.idea/
+*.iml
+
+# Ignore git files
+.git
